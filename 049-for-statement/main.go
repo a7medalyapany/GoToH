@@ -31,4 +31,28 @@ func main() {
 		fmt.Println("counting even numbers: ", i)
 	}
 
+	// nested loops
+
+	for i := range 3 {
+
+		for j := range 5 {
+			fmt.Printf("the outer loop is %v \t\t\t the inner loop is %v\n", i, j)
+		}
+	}
+
+	// range loops
+
+	xi := []int{30, 40, 50, 60, 70, 80} //slice
+	for i, v := range xi {
+		fmt.Println("ranging over a slice", i, v)
+	}
+
+	m := map[string]int{
+		"Ahmed": 8,
+		"Ali":   14,
+	}
+
+	for k, v := range m {
+		fmt.Println("ranging over a map", k, v)
+	}
 }
