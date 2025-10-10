@@ -19,3 +19,7 @@ func main() {
 		fmt.Println("x is btwn 201 and 250")
 	}
 }
+
+func init() {
+	fmt.Println("this statement will be printed before any code execute")
+}
