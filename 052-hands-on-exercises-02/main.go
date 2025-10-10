@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func main() {
@@ -32,4 +33,10 @@ func main() {
 
 	// --------------------------------------------
 
+	for i := range 100 {
+		// statement statement idiom
+		if x := rand.Intn(5); x == 3 {
+			fmt.Printf("iteration is number %v and the value of x is 3\n", i)
+		}
+	}
 }
