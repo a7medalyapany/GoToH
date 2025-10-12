@@ -26,4 +26,8 @@ func main() {
 
 	t := make([]int, 3)               // allocated with len 3
 	fmt.Println("t[0] exists:", t[0]) // safe, zero value 0
+
+	for i, v := range []int{20, 54, 23, 67, 89} {
+		fmt.Println("at index", i, "value", v)
+	}
 }
