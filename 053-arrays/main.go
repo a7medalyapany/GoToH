@@ -15,4 +15,9 @@ func main() {
 	fmt.Println(c)
 
 	fmt.Println(len(c))
+
+	// vs code keyboard shortcuts to place multiple cursors
+	// alt				click
+	// alt+shift 		drag
+	// alt+shift+i		cursors at the end of each line for selection
 }
