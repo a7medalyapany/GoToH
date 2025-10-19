@@ -30,4 +30,15 @@ func main() {
 	for i, v := range []int{20, 54, 23, 67, 89} {
 		fmt.Println("at index", i, "value", v)
 	}
+	
+	xs := []string{"ahmed", "menna", "ali", "sara", "mariam"}
+	for i := 0; i < len(xs); i++ {
+		fmt.Println("at index", i, "value", xs[i])
+	}
+
+	fmt.Println("--------------")
+	// Alternative using range
+	for i, v := range xs {
+		fmt.Println("at index", i, "value", v)
+	}
 }
