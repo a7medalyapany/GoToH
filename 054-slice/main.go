@@ -41,10 +41,25 @@ func main() {
 	for i, v := range xs {
 		fmt.Println("at index", i, "value", v)
 	}
-
+	
 	si := []int{10, 20, 30, 40, 50}
 	fmt.Println("si before appends:", si)
-
+	
 	si = append(si, 60, 70)
 	fmt.Println("si after appends:", si)
+	
+	
+	fmt.Println("--------------")
+	// Slicing operations
+
+	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	// [inclusive:exclusive]
+	fmt.Printf("slice - %v\n", slice[2:5]) // 2,3,4
+	// [:exclusive]
+	fmt.Printf("slice - %v\n", slice[:6]) // slice[:0] -> empty slice
+	// [inclusive:]
+	fmt.Printf("slice - %#v\n", slice[7:]) // from index 7 to end
+	// [:]
+	fmt.Printf("slice - %#v\n", slice[:]) // entire slice
 }
