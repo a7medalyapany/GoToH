@@ -41,4 +41,10 @@ func main() {
 	for i, v := range xs {
 		fmt.Println("at index", i, "value", v)
 	}
+
+	si := []int{10, 20, 30, 40, 50}
+	fmt.Println("si before appends:", si)
+
+	si = append(si, 60, 70)
+	fmt.Println("si after appends:", si)
 }
