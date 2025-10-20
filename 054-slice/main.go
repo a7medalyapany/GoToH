@@ -72,11 +72,29 @@ func main() {
 	
 	fmt.Println("--------------")
 	// Creating a slice with make
-
+	
 	xi := make([]int, 5, 10) // len 5, cap 10 -> putting len 5 will make the slice have 5 zero values at the beginning
 	fmt.Printf("xi - len: %d, cap: %d, value: %#v\n", len(xi), cap(xi), xi)
-
+	
 	xi = append(xi, 1, 2, 3, 4, 5, 6) // adding 6 elements
 	fmt.Printf("xi after appends - len: %d, cap: %d, value: %#v\n", len(xi), cap(xi), xi)
+	
+	
+	fmt.Println("--------------")
+	// Multi-dimensional slices
 
+	// Creating a 2D slice (3x4)
+	ahmed := []string{"ahmed", "23", "fullstack"}
+	ali := []string{"ali", "17", "student"}
+	md := [][]string{ahmed, ali}
+
+	fmt.Printf("md - len: %d, cap: %d, value: %#v\n", len(md), cap(md), md)
+
+
+	// Alternative way to create a 2D slice
+	md1 := make([][]int, 3) // 3 rows
+	for i := range md1 {
+		md1[i] = make([]int, 4) // 4 columns
+	}
+	fmt.Printf("md1 - len: %d, cap: %d, value: %#v\n", len(md1), cap(md1), md1)
 }
