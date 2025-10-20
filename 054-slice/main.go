@@ -51,9 +51,9 @@ func main() {
 	
 	fmt.Println("--------------")
 	// Slicing operations
-
+	
 	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-
+	
 	// [inclusive:exclusive]
 	fmt.Printf("slice - %v\n", slice[2:5]) // 2,3,4
 	// [:exclusive]
@@ -62,4 +62,21 @@ func main() {
 	fmt.Printf("slice - %#v\n", slice[7:]) // from index 7 to end
 	// [:]
 	fmt.Printf("slice - %#v\n", slice[:]) // entire slice
+
+
+	fmt.Println("--------------")
+	// Deleting from slice
+	slice = append(slice[:2], slice[3:]...) // remove element at index 2
+	fmt.Printf("Deleted slice - %#v\n", slice)
+	
+	
+	fmt.Println("--------------")
+	// Creating a slice with make
+
+	xi := make([]int, 5, 10) // len 5, cap 10 -> putting len 5 will make the slice have 5 zero values at the beginning
+	fmt.Printf("xi - len: %d, cap: %d, value: %#v\n", len(xi), cap(xi), xi)
+
+	xi = append(xi, 1, 2, 3, 4, 5, 6) // adding 6 elements
+	fmt.Printf("xi after appends - len: %d, cap: %d, value: %#v\n", len(xi), cap(xi), xi)
+
 }
