@@ -82,19 +82,37 @@ func main() {
 	
 	fmt.Println("--------------")
 	// Multi-dimensional slices
-
+	
 	// Creating a 2D slice (3x4)
 	ahmed := []string{"ahmed", "23", "fullstack"}
 	ali := []string{"ali", "17", "student"}
 	md := [][]string{ahmed, ali}
-
+	
 	fmt.Printf("md - len: %d, cap: %d, value: %#v\n", len(md), cap(md), md)
-
-
+	
+	
 	// Alternative way to create a 2D slice
 	md1 := make([][]int, 3) // 3 rows
 	for i := range md1 {
 		md1[i] = make([]int, 4) // 4 columns
 	}
 	fmt.Printf("md1 - len: %d, cap: %d, value: %#v\n", len(md1), cap(md1), md1)
+
+
+	fmt.Println("--------------")
+	
+	c := []int{1,2,3,4,5}
+	d := c // d references the same underlying array as c
+
+	fmt.Printf("before modification - c: %#v, d: %#v\n", c, d)
+	d[0] = 100
+	fmt.Printf("after modification - c: %#v, d: %#v\n", c, d)
+
+	// so when you want a copy, you need to explicitly copy
+	d1 := make([]int, len(c))
+	copy(d1, c) // copy contents of c into d1 -> when you modify c, d1 remains unchanged
+
+	fmt.Printf("before modification - c: %#v, d: %#v\n", c, d1)
+	c[1] = 200
+	fmt.Printf("after modification - c: %#v, d: %#v\n", c, d1)
 }
