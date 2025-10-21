@@ -32,6 +32,15 @@ func main() {
 	
 	fmt.Printf("the len - %v\nthe cap - %v\nand the slice holds -  %v\n", len(states), cap(states), states)
 
-	
+
 	fmt.Println("------------------")
+
+	jb := []string{"James", "Bond", "Shaken not stirred"}
+	jm := []string{"Miss", "Moneypenny", "Helloooooo, James."}
+
+	xp := [][]string{jb, jm}
+
+	for i, v := range xp {
+		fmt.Printf("index is %v & the data is %v\n", i, v)
+	}
 }
