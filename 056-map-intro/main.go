@@ -21,4 +21,16 @@ func main() {
 	pm["Grapes"] = 300
 
 	fmt.Printf("MAP2 : %#v - len: %v\n", pm, len(pm))
+
+	fmt.Println("-----------------")
+	// Deleting an element
+	delete(am, "omar") // wont delete as key is case-sensitive also wont panic
+	fmt.Printf("MAP : %#v - len: %v\n", am, len(am))
+	delete(am, "Omar")
+	fmt.Printf("MAP : %#v - len: %v\n", am, len(am))
+
+	fmt.Printf("It will return the ZERO value - %v\n", am["Menna"])
+
+
+	fmt.Println("-----------------")
 }
