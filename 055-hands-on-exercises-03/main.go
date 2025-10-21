@@ -18,4 +18,10 @@ func main() {
 
 	x = append(x, y...)
 	fmt.Println(x)
+	
+	
+	fmt.Println("------------------")
+	// deleting and slicing
+	x = append(x[:3], x[6:10]...)
+	fmt.Println(x)
 }
