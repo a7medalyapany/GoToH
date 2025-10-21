@@ -33,4 +33,16 @@ func main() {
 
 
 	fmt.Println("-----------------")
+	v, ok := am["Mariam"]
+	if ok {
+		fmt.Printf("Found: %v\n", v)
+	} else {
+		fmt.Printf("Not Found\n")
+	}
+
+	if v, ok := am["Ahmed"]; !ok {
+		fmt.Printf("Not Found\n")
+	} else {
+		fmt.Printf("Found: %v\n", v)
+	}
 }
