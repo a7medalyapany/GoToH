@@ -47,4 +47,22 @@ func main() {
 	fmt.Printf("Secret Agent: %+v\n", agent)
 
 	fmt.Println("Accessing embedded struct directly:", agent.person)
+
+	fmt.Println("-------------Anonymous struct---------------")
+
+	Anonymous := struct {
+		firstName string
+		lastName  string
+		age       int
+	}{
+		firstName: "Alice",
+		lastName:  "Johnson",
+		age:       28,
+	}
+
+	fmt.Println("Anonymous First Name:", Anonymous.firstName)
+	fmt.Println("Anonymous Last Name:", Anonymous.lastName)
+	fmt.Println("Anonymous Age:", Anonymous.age)
+	fmt.Printf("\nAnonymous Struct type: %T\n", Anonymous) //anonymous struct type
+	fmt.Printf("Defined Struct type: %T\n", p1)            //person struct type
 }
