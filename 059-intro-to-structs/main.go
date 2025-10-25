@@ -8,11 +8,21 @@ type person struct {
 	age       int
 }
 
+type secretAgent struct {
+	person
+	licenseToKill bool
+}
+
 func main() {
 	p1 := person{
 		firstName: "John",
 		lastName:  "Doe",
 		age:       30,
+	}
+
+	agent := secretAgent{
+		person:        p1,
+		licenseToKill: true,
 	}
 
 	fmt.Println("First Name:", p1.firstName)
@@ -27,4 +37,14 @@ func main() {
 
 	fmt.Printf("Person 1: %+v\n", p1)
 	fmt.Printf("Person 2: %+v\n", p2)
+
+	fmt.Println("-------------Embedded struct---------------")
+
+	fmt.Println("Agent First Name:", agent.firstName)
+	fmt.Println("Agent Last Name:", agent.lastName)
+	fmt.Println("Agent Age:", agent.age)
+	fmt.Println("License to Kill:", agent.licenseToKill)
+	fmt.Printf("Secret Agent: %+v\n", agent)
+
+	fmt.Println("Accessing embedded struct directly:", agent.person)
 }
