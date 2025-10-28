@@ -23,4 +23,15 @@ func main() {
 	for i, flavor := range p1.iceCreamFlavors {
 		fmt.Printf("the ice cream flavor number %v is %v\n", i+1, flavor)
 	}
+
+	fmt.Println("------------------------------")
+
+	mp := map[string]person{
+		p1.lastName: p1,
+	}
+
+	for k, v := range mp {
+		fmt.Println("Key:", k)
+		fmt.Println("Value:", v)
+	}
 }
