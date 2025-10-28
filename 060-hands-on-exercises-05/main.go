@@ -74,6 +74,27 @@ func main() {
 	fmt.Println("Vehicle 1:", v1)
 	fmt.Println("Vehicle 2:", v2)
 
-	fmt.Printf("Single field of v1 - %v & Single field of v2 - %v", v1.make, v2.model)
+	fmt.Printf("Single field of v1 - %v & Single field of v2 - %v\n", v1.make, v2.model)
+
+	fmt.Println("--------------Anonymous Struct----------------")
+
+	series := struct {
+		name    string
+		seasons int
+		genre   string
+		rating  float64
+	}{
+		name:    "Breaking Bad",
+		seasons: 5,
+		genre:   "Drama",
+		rating:  9.5,
+	}
+
+	fmt.Println("Anonymous Struct - ", series)
+
+	fmt.Printf("Field name: %v\n", series.name)
+	fmt.Printf("Field seasons: %v\n", series.seasons)
+	fmt.Printf("Field genre: %v\n", series.genre)
+	fmt.Printf("Field rating: %v\n", series.rating)
 
 }
