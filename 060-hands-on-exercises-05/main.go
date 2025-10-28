@@ -8,6 +8,18 @@ type person struct {
 	iceCreamFlavors []string
 }
 
+type engine struct {
+	electric bool
+}
+
+type vehicle struct {
+	doors  int
+	color  string
+	model  string
+	make   string
+	engine engine
+}
+
 func main() {
 
 	p1 := person{
@@ -34,4 +46,34 @@ func main() {
 		fmt.Println("Key:", k)
 		fmt.Println("Value:", v)
 	}
+
+	fmt.Println("--------------Struct----------------")
+
+	e1 := engine{
+		electric: true,
+	}
+
+	v1 := vehicle{
+		doors:  4,
+		color:  "Red",
+		model:  "Model S",
+		make:   "Tesla",
+		engine: e1,
+	}
+
+	v2 := vehicle{
+		doors: 2,
+		color: "Blue",
+		model: "Model 6",
+		make:  "Toyota",
+		engine: engine{
+			electric: false,
+		},
+	}
+
+	fmt.Println("Vehicle 1:", v1)
+	fmt.Println("Vehicle 2:", v2)
+
+	fmt.Printf("Single field of v1 - %v & Single field of v2 - %v", v1.make, v2.model)
+
 }
