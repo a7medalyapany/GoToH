@@ -37,6 +37,14 @@ func sum(numbers ...int) int {
 	return total
 }
 
+type person struct {
+	firstName string
+}
+
+func (p person) greet() {
+	fmt.Println("Hello, my name is", p.firstName)
+}
+
 func main() {
 	foo()
 
@@ -61,7 +69,14 @@ func main() {
 	fmt.Println("\nTotal sum from slice is:", total2)
 
 	fmt.Println("------------Defer a function call------------")
-	defer foo()
+	// defer foo() // Uncommenting this line will call foo() at the end of main
 	fmt.Println(bar())
+
+	fmt.Println("------------Methods------------")
+	p1 := person{firstName: "Bob"}
+	p2 := person{firstName: "Carol"}
+
+	p1.greet()
+	p2.greet()
 
 }
