@@ -54,4 +54,9 @@ func main() {
 	total := sum(23, 9, 4, 13, 8, 1, 6, 5)
 
 	fmt.Println("\nTotal sum is:", total)
+
+	fmt.Println("------------Unfurling a slice------------")
+	xi := []int{10, 20, 30, 40, 50}
+	total2 := sum(xi...)
+	fmt.Println("\nTotal sum from slice is:", total2)
 }
