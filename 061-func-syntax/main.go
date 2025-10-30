@@ -59,4 +59,9 @@ func main() {
 	xi := []int{10, 20, 30, 40, 50}
 	total2 := sum(xi...)
 	fmt.Println("\nTotal sum from slice is:", total2)
+
+	fmt.Println("------------Defer a function call------------")
+	defer foo()
+	fmt.Println(bar())
+
 }
