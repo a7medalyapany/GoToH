@@ -25,6 +25,18 @@ func baz(s string) {
 func qux(name string, age int) (string, int) {
 	return fmt.Sprintf("qux called with name: %v", name), age
 }
+
+// Variadic function example
+func sum(numbers ...int) int {
+	fmt.Printf("numbers - %v & type of it is %T", numbers, numbers)
+
+	total := 0
+	for _, num := range numbers {
+		total += num
+	}
+	return total
+}
+
 func main() {
 	foo()
 
@@ -36,4 +48,10 @@ func main() {
 	resultQux, age := qux("Alice", 30)
 	fmt.Println(resultQux)
 	fmt.Println("Age returned from qux:", age)
+
+	fmt.Println("------------Variadic Parameters------------")
+
+	total := sum(23, 9, 4, 13, 8, 1, 6, 5)
+
+	fmt.Println("\nTotal sum is:", total)
 }
