@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"fmt"
 	"log"
 	"os"
 )
@@ -29,4 +31,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("Could not write to file: %v", err)
 	}
+
+	fmt.Println("----------------Buffer-----------------")
+	// Create a buffer and write to it
+	b := bytes.NewBufferString("Hello ")
+	fmt.Println(b.String())
+	b.WriteString("World")
+	fmt.Println(b.String())
+
+	b.Reset()
+	b.WriteString("Alyapany")
+	fmt.Println(b.String())
+	b.Write([]byte(" Was Here"))
+	fmt.Println(b.String())
 }
