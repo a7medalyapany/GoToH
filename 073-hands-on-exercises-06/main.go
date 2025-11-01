@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	fmt.Println(foo())
-	fmt.Println(bar())
+	i, s := bar()
+	fmt.Println(i, s)
 }
 
 func foo() int {
