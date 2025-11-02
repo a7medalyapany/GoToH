@@ -8,4 +8,12 @@ func main() {
 			fmt.Println(i)
 		}
 	}()
+
+	x := func() {
+		for i := range 3 {
+			fmt.Println("Line number:", i)
+		}
+	}
+
+	x()
 }
