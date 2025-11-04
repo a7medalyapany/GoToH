@@ -16,4 +16,15 @@ func main() {
 	}
 
 	x()
+
+	fmt.Println("-----------Function return a function-----------")
+
+	y := addOne()
+	fmt.Println(y(5))
+}
+
+func addOne() func(int) int {
+	return func(x int) int {
+		return x + 1
+	}
 }
