@@ -4,3 +4,5 @@ github.com/a7medalyapany/puppy v0.0.0-20251005121232-f37093b18474 h1:s48J0xWzsp1
 github.com/a7medalyapany/puppy v0.0.0-20251005121232-f37093b18474/go.mod h1:9WX5dniQOElaDcsX+b8VQ1CNEi3WiC9O/ZIwbNEOkkc=
 github.com/a7medalyapany/puppy v0.0.0-20251005181841-e32bfb6da6fe h1:ySAvc89QHJ1AxPBk3j6rXKgmHVih/0VB9AUo1HW6oK8=
 github.com/a7medalyapany/puppy v0.0.0-20251005181841-e32bfb6da6fe/go.mod h1:abrc42uIlCNTSR1oesPpLMyy0hdctQuZ2+9W32IPDW8=
+golang.org/x/crypto v0.44.0 h1:A97SsFvM3AIwEEmTBiaxPPTYpDC47w720rdiiUvgoAU=
+golang.org/x/crypto v0.44.0/go.mod h1:013i+Nw79BMiQiMsOPcVCB5ZIJbYkerPrGnOa00tvmc=
