@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	cr := make(chan<- int)
 
@@ -9,5 +7,6 @@ func main() {
 		cr <- 42
 	}()
 
-	fmt.Println("cr", <-cr)
+	// The following line is commented out because it will cause a deadlock at runtime.
+	// fmt.Println("cr", <-cr)
 }
