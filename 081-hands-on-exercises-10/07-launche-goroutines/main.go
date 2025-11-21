@@ -1,12 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
 	c := make(chan int)
 
 	gen(c)
+	fmt.Println("Goroutines after gen():", runtime.NumGoroutine())
+
 	receive(c)
+	fmt.Println("Goroutines after receive():", runtime.NumGoroutine())
 
 	fmt.Println("about to exit")
 }
