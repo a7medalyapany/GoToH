@@ -9,9 +9,9 @@ func TestSum(t *testing.T) {
 	}
 
 	tests := []testCases{
-		testCases{data: []int{1, 2, 3, 4, 5}, answer: 15},
-		testCases{data: []int{10, 20, 30}, answer: 60},
-		testCases{data: []int{-1, -2, -3, -4, 4}, answer: -6},
+		{data: []int{1, 2, 3, 4, 5}, answer: 15},
+		{data: []int{10, 20, 30}, answer: 60},
+		{data: []int{-1, -2, -3, -4, 4}, answer: -6},
 	}
 
 	for _, tc := range tests {
